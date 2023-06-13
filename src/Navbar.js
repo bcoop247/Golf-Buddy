@@ -10,14 +10,15 @@ export default function Navbar() {
   const [showNewComponent, setShowNewComponent] = useState(false);
   const [isMatch, setIsMatch] = useState(false);
 
+  const handleChange = (event) => {setUserInput(event.target.value);};
+
   const handleSubmit = (event) => { event.preventDefault();
     setSearch(userInput);
     setShowNewComponent(true);
     console.log('Search term:', userInput);
     
-  };
-
-  const handleChange = (event) => {setUserInput(event.target.value);};
+  
+};
 
   useEffect(() => {
     if(search){
@@ -26,6 +27,7 @@ export default function Navbar() {
     .then(data => {
       console.log(data);
       setPlayers(data);
+      setIsMatch(search === data.FirstName);
     })
     }
     
