@@ -4,35 +4,27 @@ import PlayerInfo from './PlayerInfo'
 
 
 export default function Navbar() {
-  const [search, setSearch] = useState('');
   const [userInput, setUserInput] = useState('');
-  const [players, setPlayers] = useState({});
-  const [showNewComponent, setShowNewComponent] = useState(false);
-  const [isMatch, setIsMatch] = useState(false);
-
+  const [searchQuery, setSetSearchQuery] = useState('');
+  const [renderNewComponent, setRenderNewComponent] = useState(false);
+  const [apiData, setApiData] = useState([]);
+  
   const handleChange = (event) => {setUserInput(event.target.value);};
 
   const handleSubmit = (event) => { event.preventDefault();
-    setSearch(userInput);
-    setShowNewComponent(true);
-    console.log('Search term:', userInput);
+    setSetSearchQuery(userInput);
+    setRenderNewComponent(true);
     
-  
 };
 
-  useEffect(() => {
-    if(search){
-    fetch(`https://api.sportsdata.io/golf/v2/json/Players?key=7a3ef3ea981c4b2abe5dbe75f32d13b5`)
+  useEffect(() => { fetch(`https://api.sportsdata.io/golf/v2/json/Players?key=7a3ef3ea981c4b2abe5dbe75f32d13b5`)
     .then(res => res.json())
     .then(data => {
-      console.log(data);
-      setPlayers(data);
-      setIsMatch(search === data.FirstName);
+      setApiData(data);
     })
-    }
     
-  },[search]);
-  
+  },[searchQuery]);
+
 
 return(
   <div>
@@ -45,13 +37,11 @@ return(
         <li>
           <form onSubmit={handleSubmit}>
           <input type="text" id="search" placeholder='Search Player' onChange={handleChange} value={userInput}></input>
-          
           </form>
-          
         </li>
       </ul>
     </nav>
-    {showNewComponent && <PlayerInfo info={players} />}
+    {renderNewComponent && <PlayerInfo userInput={searchQuery} apiData={apiData} />}
   </div>
   
 )

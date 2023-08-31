@@ -16,7 +16,7 @@ body{
   top: 0%;
   height: 8%;
   width: 100%;
-  border: dotted red;
+  border: solid black 5px;
   list-style-type: none;
   
 }
@@ -36,42 +36,57 @@ body{
   margin-left: 500px;
   border-radius: 10px;
 }
-#season{
+.season{
   height: 25px;
   text-align: center;
-  
   margin-left: 45%;
-  
+  border-radius: 10px;
 }
+  
+
 .table{
   font-weight: bold;
   font-size: 20px;
   color: white;
-  border: dotted red 2px;
+  border: solid black 5px;
   width: 80%;
   height: 500px;
   margin: 5% 10%;
+  text-align: left;
 }
 .home{
-  border: dotted red;
   margin: 10% 10%;
   height: 600px;
   display: flex;
 }
-.leaderboard{
-  border: dotted red;
+.leaderboardlink{
+  border: black solid 5px;;
   width: 40%;
   margin: 5% 5%;
   background-image: url(gettyimages-483135361-1024x1024.png);
   background-size: contain;
   background-repeat: no-repeat;
 }
-.tournament{
-  border: dotted red;
+.tournamentslink{
+  border: black solid 5px;
   width: 40%;
   margin: 0% 5%;
   background-image: url(trophy-png-30582.png);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.search_results li{
+  color: white;
+  font-size: 20px;
+  list-style-type: none;
 }
 
 

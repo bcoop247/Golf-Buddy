@@ -1,23 +1,20 @@
 
-import FetchPlayers from "./FetchPlayers"
 import { Link } from 'react-router-dom'
+
 
 export default function Home() {
 
-  const handleClick = (event) => {
-    alert('testing');
-  }
-
   return (
+    
     <div className="home">
-      <div className="leaderboard" onClick={handleClick} style={{ cursor: 'pointer' }}>
-      
-      </div>
 
-      <div className="tournament">
-
-      </div>
+      <Link to="FetchPlayers" className='leaderboardlink'>
+      <div className="leaderboard" style={{ cursor: 'pointer' }}></div>
+      </Link>
       
+      <Link to="Tournaments" className='tournamentslink'>
+      <div className="tournament" style={{ cursor: 'pointer' }}></div>
+      </Link>
       
     </div>
   )
