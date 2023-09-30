@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/golf-leaderboards/static/css/main.56c5c66e.css",
+    "main.js": "/golf-leaderboards/static/js/main.7aae67e2.js",
+    "static/media/58469.jpg": "/golf-leaderboards/static/media/58469.5b0f4896d0454fc88554.jpg",
+    "static/media/trophy-png-30582.png": "/golf-leaderboards/static/media/trophy-png-30582.4dd94f7345461f5222d2.png",
+    "static/media/gettyimages-483135361-1024x1024.png": "/golf-leaderboards/static/media/gettyimages-483135361-1024x1024.61ae98e57f38adf8aa96.png",
+    "index.html": "/golf-leaderboards/index.html",
+    "main.56c5c66e.css.map": "/golf-leaderboards/static/css/main.56c5c66e.css.map",
+    "main.7aae67e2.js.map": "/golf-leaderboards/static/js/main.7aae67e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56c5c66e.css",
+    "static/js/main.7aae67e2.js"
+  ]
+}
